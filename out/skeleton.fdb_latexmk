@@ -1,0 +1,41 @@
+# Fdb version 4
+["dvipdf"] 1699068880 "out/skeleton.dvi" "out/skeleton.pdf" "out/skeleton" 1699068881 0
+  "out/skeleton.dvi" 1699068880 2228 50e571a6231bbe97be1dcdf697ae7fca "latex"
+  (generated)
+  "out/skeleton.pdf"
+  (rewritten before read)
+["latex"] 1699068880 "skeleton.tex" "out/skeleton.dvi" "skeleton" 1699068881 0
+  "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm" 1463434352 856 7404843a5f798859944d7973a47821d5 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm" 1463434352 856 39c171483fe1bb7d0e1368980c0c205b ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm" 1136768653 1328 5442e22a7072966dbaf88ca900acf3f0 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr17.tfm" 1136768653 1292 296a67155bdbfc32aa9c636f21e91433 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1136768653 1292 21c1c5bfeaebccffdb478fd231a0997d ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr9.tfm" 1136768653 1292 6b21b9c2c7bebb38aa2273f7ca0fb3af ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmss10.tfm" 1136768653 1316 b636689f1933f24d1294acdf6041daaa ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmss12.tfm" 1136768653 1324 37b971caf729d7edd9cbb9f9b0ea76eb ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmss17.tfm" 1136768653 1320 ed93d62c5f2c16343826001f03341dbc ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmss9.tfm" 1136768653 1320 49357c421c0d469f88b867dd0c3d10e8 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm" 1136768653 1272 e2d13f0df30bf3ad990bb9d028e37f34 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-dvips.def" 1673989714 36094 f50bbd0ac1e5d89f3bafd820930998cd ""
+  "/usr/local/texlive/2023/texmf-dist/tex/platex/jsclasses/jsbook.cls" 1677186565 64064 11027d52084b7c6f9e4509baef2d434e ""
+  "/usr/local/texlive/2023/texmf-dist/tex/platex/jsclasses/jslogo.sty" 1601931076 5585 8e4615c54073c390d14154b29cee89cb ""
+  "/usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf" 1677365944 40745 87bb86a62d462f93a1efc6b0c65c872e ""
+  "/usr/local/texlive/2023/texmf-var/web2c/eptex/platex.fmt" 1699029761 7883685 7f459ebf6ed9b84c45e69c16120e81df ""
+  "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
+  "out/skeleton.aux" 1699068880 730 2c4cb68f9310a12ff3301bf63020e974 "latex"
+  "out/skeleton.toc" 1699068880 188 42439163d61e4d43841dff9f0bedaead "latex"
+  "skeleton.tex" 1699068879 1078 2d34f7fd080aef2259350081de48d931 ""
+  "suribt.cls" 1699065345 15946 f2c4578dfa4be327366bb6fc0cf8742a ""
+  (generated)
+  "out/skeleton.aux"
+  "out/skeleton.dvi"
+  "out/skeleton.log"
+  "out/skeleton.toc"
+  (rewritten before read)

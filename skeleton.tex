@@ -1,4 +1,5 @@
 \documentclass[platex]{suribt}
+\usepackage{url}
 \title{ランダムフォレストによるサッカーW杯の優勝国予想}
 \author{石田亜斗武}
 \eauthor{Atomu Ishida}% Copyright 表示で使われる
@@ -25,15 +26,39 @@
 \tableofcontents%%%%%%%%%%%%% 目次 %%%%%%%%
 
 \mainmatter% ここから本文 %%% 本文 %%%%%%%%
-\chapter{}
+\chapter{はじめに}
+\section{研究背景}
+サッカーは、世界中で最も人気のあるスポーツの一つである。その頂点に位置するのが、4年に一度開催されるFIFAワールドカップであり、しばしば予想を裏切る結果が生まれる。実際に2022年FIFAワールドカップでの日本のスペインやドイツといったサッカーの強豪国に勝利したことは世界中に大きな驚きを与えた[1]。このような予測の困難さが魅力の一つとも言えるが、同時に多くのファンやステークホルダーが正確な予測を求めている。近年、スポーツの試合結果を科学的に分析するアナリティクスの分野が注目され、予測の精度を高めるために統計的手法や機械学習が利用されるようになっている。[2]この傾向は、ワールドカップのような経済効果が大きく[3]予測不可能性が高いイベントにおいても、重要な意味を持ち始めていると考える。そこで本研究では、自分の長年のサッカーの経験と、人工知能や機械学習の知識を使い、ワールドカップの優勝国を予測できるモデルを構築することを提案する。
+\section{研究目的}
+本研究の目的は、過去のFIFAワールドカップのデータをもとに、優勝国を予測する高精度な予測モデルを構築することである。予測モデルによる予測結果を利用し、賭けや投資の意思決定のサポート、チームの戦略立案への活用など、FIFAワールドカップに関わる人々にとって有益な情報を提供することができると期待される。本研究では、先行研究[4][5]からスポーツの勝敗予測に適しているとされるランダムフォレストを用いて予測モデルを構築する。ランダムフォレストには特徴量の重要度の評価ができるなどの特徴[6]があり、スポーツの勝敗予測に対して有用な特徴変数を確定することが困難である[7]という問題も改善できると考えられる。モデルの評価では、交差検証や混同行列、精度や再現率、F1スコアなどの指標からモデルを評価する。
+
+\section{論文の構成}
+第２章では、本研究の関連技術と用語について述べる。\par
+第３章では、検証実験について述べる。\par
+第４章では、まとめと今後について述べる。
+
 
 \backmatter% ここから後付
 \chapter{謝辞}%%%%%%%%%%%%%%% 謝辞 %%%%%%%
 
-\begin{thebibliography}{}%%%% 参考文献 %%%
- \bibitem{}
-\end{thebibliography}
+\begin{thebibliography}{2}%%%% 参考文献 %%%
+\bibitem{one}
+公益財団法人日本サッカー協会, FIFAワールドカップカタール2022, JFA.jp, \url{https://www.jfa.jp/samuraiblue/worldcup_2022/schedule_result/}
+\bibitem{two}
+谷岡広樹, "スポーツアナリティクスにおけるデータとAI活用",P1, 2020
+\bibitem{three}
+サッカーFIFAワールドカップロシア大会組織委員会,  \url{https://digitalhub.fifa.com/m/5afd3d89f0e69eb/original/ya7pgcyslxpzlqmjkykg-pdf.pdf}, 2018
+\bibitem{four}
+Rahul Baboota, Harleen Kaur, “Predictive analysis and modelling football results using machine learning approach for English Premier League” P15 2018
+\bibitem{five}
+Teno Gonz'alez, Dos Santos, Chunyan Wang Niklas, Carlsson Patrick Lambrix, Linko ping University, Sweden. “Predicting Season Outcomes for the NBA”, P11, 2021
+\bibitem{six}
+Matthias Schonlau, Rosie Yuyan Zou, “The random forest algorithm for statistical learning”, P4, 2020
+\bibitem{seven}
+Milad Keshtkar Langaroudi, Mohammad Reza Yamaghani, “Sports Result Prediction Based on Machine Learning and Computational Intelligence Approaches A Survey”, P1, 2019
 
+
+\end{thebibliography}
 \appendix% ここから付録 %%%%% 付録 %%%%%%%
 \chapter{}
 \end{document}

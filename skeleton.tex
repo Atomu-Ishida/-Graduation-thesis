@@ -4,8 +4,8 @@
 \author{石田亜斗武}
 \eauthor{Atomu Ishida}% Copyright 表示で使われる
 \studentid{2014011}
-\supervisor{六井 淳 役職　\deputy 渡邊貴之 役職}% 1 つ引数をとる (役職まで含めて書く)
-\handin{9999}{99}% 提出月. 2 つ (年, 月) 引数をとる
+\supervisor{六井 淳 教授\deputy 渡邊貴之 教授}% 1 つ引数をとる (役職まで含めて書く)
+\handin{2024}{1}% 提出月. 2 つ (年, 月) 引数をとる
 
 \begin{document}
 \maketitle%%%%%%%%%%%%%%%%%%% タイトル %%%%
@@ -13,28 +13,26 @@
 
 \frontmatter% ここから前文
 \begin{jabstract}%%%%%%%%%%%%% 概要 %%%%%%%%
-  サッカーは世界で最も人気のあるスポーツであり、その中でもFIFAワールドカップは注目の集まるイベントである。さらに、ワールドカップのような経済効果が大きく予測不可能性が高いイベントに対して、試合結果を予測することにも注目が集まっている。しかしながら、試合の予測は多くの不確定要素を含むため困難を極める。\par
-  本研究では、これらの予測の難しさに対処し、より精度の高いモデルの構築を目的とする。ランダムフォレストという機械学習手法を用いて、優勝国の予測を行うモデルを開発する。本手法は、試合結果予測において重要な特徴量を効果的に評価することが可能であり、過去のデータから学習を行うことで、試合の結果を予測する。実験では、データの収集と前処理、特徴選択、ハイパーパラメータチューニングを行い、交差検証を通じてモデルの有効性を評価する。\par
-  本研究の結果は、賭けや投資の意思決定サポート、チームの戦略立案に対する有益な洞察を提供することが期待される。
+  日本は2022年FIFAワールドカップでスペインやドイツと同じグループに入り、予想外の好成績を収めた。このように予測困難なスポーツの試合結果を予測するために、統計的手法や機械学習が注目されている。そこで本研究では自身のサッカー経験とAIや機械学習の知識を活用して、ワールドカップの優勝国を予測するモデルの提案に着目した。\par
+  本研究は、過去のFIFAワールドカップのデータを使用して、優勝国を予測するための予測モデルを構築することを目的とする。スポーツの試合に関するデータの活用が注目されており、予測結果はFIFAワールドカップに関わる人々に有益な情報を提供することが期待できる。本研究では、ランダムフォレストを用いてモデルを作成する。多数の決定木を組み合わせることで過学習を防ぎながら、重要な特徴量を評価し複雑なデータ構造を学習することができる、スポーツの勝敗予測において他の手法に比べ予測精度が高いなどの理由からランダムフォレストを採用する。モデルの評価では精度や再現率、F1スコアなどの評価指標を使用する。
 \end{jabstract}
 
 \newpage
 
 \begin{eabstract}%%%%%%%%%%%%% 概要 %%%%%%%%
-  Soccer is the most popular sport in the world, and the FIFA World Cup is the most high-profile event of its kind. Furthermore, for an event with such a large economic impact and high unpredictability as the World Cup, there is a growing interest in predicting the outcome of matches. However, predicting matches is extremely difficult due to the many uncertainties involved.\par
-  This study aims to address these prediction difficulties and build a more accurate model. We will develop a model that predicts the winning country using a machine learning method called Random Forest. This method can effectively evaluate features that are important in predicting the outcome of a match and learns from past data. Experiments involve data collection and preprocessing, feature selection, and hyperparameter tuning to evaluate the effectiveness of the model through cross-validation.\par
-  The results of this study are expected to provide useful insights into betting and investment decision support and team strategy planning.
+  Japan unexpectedly performed well in the 2022 FIFA World Cup, placing in the same group as Spain and Germany. Statistical methods and machine learning have been attracting attention for predicting the outcome of such difficult-to-predict sports matches. Therefore, this study focused on proposing a model to predict the winning country of the World Cup by utilizing his own soccer experience and knowledge of AI and machine learning.\par
+  This study aims to build a prediction model to predict the winning country using data from past FIFA World Cups. The use of data on sports matches is attracting attention, and the prediction results are expected to provide useful information to people involved in the FIFA World Cup. In this study, the model is created using a random forest. Random forests are employed because they can evaluate important features and learn complex data structures while preventing overlearning by combining a large number of decision trees, and they have higher prediction accuracy than other methods in sports win/loss prediction. Evaluation of the model will use metrics such as accuracy, reproducibility, and F1 score.
 \end{eabstract}
 
-
+\setcounter{tocdepth}{2}
 \tableofcontents%%%%%%%%%%%%% 目次 %%%%%%%%
-
 \mainmatter% ここから本文 %%% 本文 %%%%%%%%
 \chapter{はじめに}
 \section{研究背景}
-サッカーは、世界中で最も人気のあるスポーツの一つである。その頂点に位置するのが、4年に一度開催されるFIFAワールドカップであり、しばしば予想を裏切る結果が生まれる。実際に2022年FIFAワールドカップでの日本のスペインやドイツといったサッカーの強豪国に勝利したことは世界中に大きな驚きを与えた[1]。このような予測の困難さが魅力の一つとも言えるが、同時に多くのファンやステークホルダーが正確な予測を求めている。近年、スポーツの試合結果を科学的に分析するアナリティクスの分野が注目され、予測の精度を高めるために統計的手法や機械学習が利用されるようになっている。[2]この傾向は、ワールドカップのような経済効果が大きく[3]予測不可能性が高いイベントにおいても、重要な意味を持ち始めていると考える。そこで本研究では、自分の長年のサッカーの経験と、人工知能や機械学習の知識を使い、ワールドカップの優勝国を予測できるモデルを構築することを提案する。
+2022年FIFAワールドカップでは、日本は死のグループと呼ばれる、スペインやドイツといったサッカーの強豪国と同じグループEに属することになった。しかし、結果はスペインとドイツの両国に勝利し、グループステージを突破し、敗戦濃厚とされていた強豪国クロアチアにPK戦であと一歩のところで負けてしまったが、世界中に大きな驚きを与えた[1]。このように、近年では予測が困難なスポーツの試合結果を科学的に分析するアナリティクスの分野が注目され、予測の精度を高めるために統計的手法や機械学習が利用されるようになっている[2]。そこで本研究では、私自身の長年のサッカーの経験と、人工知能や機械学習の知識を使い、ワールドカップの優勝国を予測できるモデルの提案に着目した。
 \section{研究目的}
-本研究の目的は、過去のFIFAワールドカップのデータをもとに、優勝国を予測する高精度な予測モデルを構築することである。予測モデルによる予測結果を利用し、賭けや投資の意思決定のサポート、チームの戦略立案への活用など、FIFAワールドカップに関わる人々にとって有益な情報を提供することができると期待される。本研究では、先行研究[4][5]からスポーツの勝敗予測に適しているとされるランダムフォレストを用いて予測モデルを構築する。ランダムフォレストには特徴量の重要度の評価ができるなどの特徴[6]があり、スポーツの勝敗予測に対して有用な特徴変数を確定することが困難である[7]という問題も改善できると考えられる。モデルの評価では、交差検証や混同行列、精度や再現率、F1スコアなどの指標からモデルを評価する。
+本研究の目的は、過去のFIFAワールドカップのデータをもとに、優勝国を予測する高精度な予測モデルを構築することである。近年ではスタッツデータと呼ばれるスポーツの試合に関するデータの活用の注目が高まり、リーグやチームの選手強化や戦術立案、スポーツベッティングで利用されている[3]ことから、本研究の予測結果はFIFAワールドカップに関わる人々にとって有益な情報を提供することが期待できる。\par
+本研究でランダムフォレストを採用した理由は、その柔軟性と予測精度の高さにある。スポーツの勝敗予測に対して有用な特徴変数を確定することが困難である[4]という問題に対して、ランダムフォレストは多数の決定木を組み合わせることで過学習[5]を防ぎながらも、重要な特徴量を効果的に評価し、複雑なデータ構造を学習することができる[6]。また、先行研究[7][8]からも他の手法に比べて予測精度が高いことも分かる。モデルの評価では、精度や再現率、F1スコアなどの評価指標[8]を用いてモデルを評価する。
 \section{論文の構成}
 第２章では、本研究の関連技術と用語について述べる。\par
 第３章では、検証実験について述べる。\par
@@ -42,15 +40,20 @@
 
 \chapter{関連技術}
 \section{ランダムフォレスト}
-\section{特徴選択}
+\subsection{特徴選択}
 \section{データの前処理}
 \section{ハイパーパラメータチューニング}
 
 \chapter{検証実験}
-\section{実験内容}
-\section{収集データ}
-\section{評価方法}
-\section{実験結果}
+\section{データ詳細}
+\section{評価指標}
+\subsection{混合行列}
+\subsection{正解率}
+\subsection{適合率}
+\subsection{再現率}
+\subsection{F値}
+\section{検証内容}
+\section{検証結果}
 \section{考察}
 
 \chapter{まとめと今後の課題}
@@ -61,20 +64,25 @@
 \chapter{謝辞}%%%%%%%%%%%%%%% 謝辞 %%%%%%%
 
 \begin{thebibliography}{2}%%%% 参考文献 %%%
-\bibitem{one}
+\bibitem{}
 公益財団法人日本サッカー協会, FIFAワールドカップカタール2022, JFA.jp, \url{https://www.jfa.jp/samuraiblue/worldcup_2022/schedule_result/}
-\bibitem{two}
+\bibitem{}
 谷岡広樹, "スポーツアナリティクスにおけるデータとAI活用",P1, 2020
-\bibitem{three}
-サッカーFIFAワールドカップロシア大会組織委員会,  \url{https://digitalhub.fifa.com/m/5afd3d89f0e69eb/original/ya7pgcyslxpzlqmjkykg-pdf.pdf}, 2018
-\bibitem{four}
-Rahul Baboota, Harleen Kaur, “Predictive analysis and modelling football results using machine learning approach for English Premier League” P15 2018
-\bibitem{five}
-Teno Gonz'alez, Dos Santos, Chunyan Wang Niklas, Carlsson Patrick Lambrix, Linko ping University, Sweden. “Predicting Season Outcomes for the NBA”, P11, 2021
-\bibitem{six}
-Matthias Schonlau, Rosie Yuyan Zou, “The random forest algorithm for statistical learning”, P4, 2020
-\bibitem{seven}
+\bibitem{}
+経済産業省,スポーツ庁, "スポーツDXレポート",2022
+\bibitem{}
 Milad Keshtkar Langaroudi, Mohammad Reza Yamaghani, “Sports Result Prediction Based on Machine Learning and Computational Intelligence Approaches A Survey”, P1, 2019
+\bibitem{}
+TRYETING"機械学習における過学習とは何か？原因・回避方法をくわしく解説",https://www.tryeting.jp/column/6846/
+\bibitem{}
+Matthias Schonlau, Rosie Yuyan Zou, “The random forest algorithm for statistical learning”, P4, 2020
+\bibitem{}
+Rahul Baboota, Harleen Kaur, “Predictive analysis and modelling football results using machine learning approach for English Premier League” P15 2018
+\bibitem{}
+Teno Gonz'alez, Dos Santos, Chunyan Wang Niklas, Carlsson Patrick Lambrix, Linko ping University, Sweden. “Predicting Season Outcomes for the NBA”, P11, 2021
+\bibitem{}
+TRYETING"機械学習における評価指標とは？種類から学習方法まで徹底解説",\url{https://www.tryeting.jp/column/6042/}
+
 
 
 \end{thebibliography}

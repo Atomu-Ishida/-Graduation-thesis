@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.1.0-230214-2.6 (utf8.euc) (TeX Live 2023) (preloaded format=platex 2023.11.4)  13 NOV 2023 20:15
+This is e-pTeX, Version 3.141592653-p4.1.0-230214-2.6 (utf8.euc) (TeX Live 2023) (preloaded format=platex 2023.11.4)  19 NOV 2023 13:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -179,7 +179,7 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 
 ] [2]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 28.
+(Font)              scaled to size 23.90964pt on input line 29.
  (out/skeleton.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 2.
@@ -202,24 +202,24 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
  [4]
 第1章
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 19.9311pt on input line 30.
+(Font)              scaled to size 19.9311pt on input line 31.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 19.9311pt on input line 30.
+(Font)              scaled to size 19.9311pt on input line 31.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 19.9311pt on input line 30.
+(Font)              scaled to size 19.9311pt on input line 31.
 [1
 
 
 ] [2]
 第2章
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 43.
+(Font)              scaled to size 11.53198pt on input line 44.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 43.
+(Font)              scaled to size 11.53198pt on input line 44.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 43.
+(Font)              scaled to size 11.53198pt on input line 44.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 43.
+(Font)              scaled to size 11.53198pt on input line 44.
 [3
 
 ]
@@ -233,7 +233,12 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 ] [6
 
 
-] [7
+]
+Underfull \hbox (badness 7486) in paragraph at lines 83--84
+[]\OT1/cmr/m/n/10 Philipp Probst,"Hyperparameters and Tun-ing Strate-gies for Ran-dom For-
+ []
+
+[7
 
 ]
 付録A
@@ -245,12 +250,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 944 strings out of 476693
- 15118 string characters out of 5805373
+ 942 strings out of 476693
+ 15097 string characters out of 5805373
  1851209 words of memory out of 5000000
- 21450 multiletter control sequences out of 15000+600000
- 528167 words of font info for 106 fonts, out of 8000000 for 9000
+ 21449 multiletter control sequences out of 15000+600000
+ 527999 words of font info for 105 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 55i,8n,62p,743b,446s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,8n,62p,691b,446s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/skeleton.dvi (14 pages, 19292 bytes).
+Output written on out/skeleton.dvi (14 pages, 18636 bytes).

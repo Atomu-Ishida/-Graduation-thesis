@@ -1,10 +1,10 @@
 # Fdb version 4
-["dvipdf"] 1699874106 "out/skeleton.dvi" "out/skeleton.pdf" "out/skeleton" 1699874107 0
-  "out/skeleton.dvi" 1699874106 19292 9b42b9cfe94a36dfe63249a62adbbdeb "latex"
+["dvipdf"] 1700368280 "out/skeleton.dvi" "out/skeleton.pdf" "out/skeleton" 1700368282 0
+  "out/skeleton.dvi" 1700368279 18636 2d17c0ca196e32c3ba383a59b0f57ef4 "latex"
   (generated)
   "out/skeleton.pdf"
   (rewritten before read)
-["latex"] 1699874105 "skeleton.tex" "out/skeleton.dvi" "skeleton" 1699874107 0
+["latex"] 1700368279 "skeleton.tex" "out/skeleton.dvi" "skeleton" 1700368282 0
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
@@ -23,7 +23,6 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmss9.tfm" 1136768653 1320 49357c421c0d469f88b867dd0c3d10e8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm" 1136768653 1272 e2d13f0df30bf3ad990bb9d028e37f34 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
-  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm" 1136768653 768 1321e9409b4137d6fb428ac9dc956269 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-dvips.def" 1673989714 36094 f50bbd0ac1e5d89f3bafd820930998cd ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/local/texlive/2023/texmf-dist/tex/platex/jsclasses/jsbook.cls" 1677186565 64064 11027d52084b7c6f9e4509baef2d434e ""
@@ -31,9 +30,9 @@
   "/usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf" 1677365944 40745 87bb86a62d462f93a1efc6b0c65c872e ""
   "/usr/local/texlive/2023/texmf-var/web2c/eptex/platex.fmt" 1699029761 7883685 7f459ebf6ed9b84c45e69c16120e81df ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "out/skeleton.aux" 1699874106 3423 e7c37d158ab9c175cdedec7bdf318f9f "latex"
-  "out/skeleton.toc" 1699874106 1639 be34211ece77e926cc1be69c78378307 "latex"
-  "skeleton.tex" 1699874104 7862 1354a533072dedefa323a2e09b945f32 ""
+  "out/skeleton.aux" 1700368279 3423 7f0906608069c1e0f9eaadab3c2a9d3a "latex"
+  "out/skeleton.toc" 1700368279 1639 db19dacf7ac1235625a27963469349b0 "latex"
+  "skeleton.tex" 1700368278 7512 d50117266b94972d955712323c2b50ff ""
   "suribt.cls" 1699065345 15946 f2c4578dfa4be327366bb6fc0cf8742a ""
   (generated)
   "out/skeleton.aux"

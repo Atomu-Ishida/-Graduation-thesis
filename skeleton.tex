@@ -13,8 +13,9 @@
 
 \frontmatter% ここから前文
 \begin{jabstract}%%%%%%%%%%%%% 概要 %%%%%%%%
-  スポーツの勝敗予測は、選手のコンディション、戦術の変化、チームの相互作用など、多数の変数に影響されるため、予測が非常に困難である。近年では、予測が困難なスポーツの試合結果の予測の精度を高めるために統計的手法や機械学習が利用されるようになっている。そこで本研究では、私自身の長年のサッカーの経験と、人工知能や機械学習の知識を使い、FIFAワールドカップ優勝国の予測を行う。\par
-  本研究ではスポーツの勝敗予測における変数の複雑性に対応するため、ランダムフォレストという機械学習手法を用いる。ランダムフォレストは他の手法に比べて、多数の決定木を利用することでデータの多様性と複雑性を捉え、過学習のリスクを軽減し、信頼性の高い予測結果を提供する。また、モデル構築とチューニングの容易であり、限られた研究期間内での成果を実現可能にする。この研究の成果は、スポーツ分析の分野でのデータ活用の高まりに応じて、FIFAワールドカップに関わる人々にとって有益な情報を提供することが期待できる。
+  スポーツの勝敗予測は、選手のコンディション、戦術の変化、チームの相互作用など、多数の変数に影響される。本研究では、私自身の長年のサッカーの経験と、人工知能や機械学習の知識を使い、FIFAワールドカップ優勝国の予測を行う。\par
+  本研究ではスポーツの勝敗予測における変数の複雑性に対応するため、ランダムフォレストという機械学習手法を用いる。ランダムフォレストはモデル構築とチューニングの容易さから、活用範囲の広い手法であることが知られている。FIFAワールドカップの優勝国を予測するために過去の大会の結果からデータセットを作成し、ランダムフォレストで予測モデルを構築し予測を行った。
+
 \end{jabstract}
 
 \newpage
@@ -30,10 +31,13 @@
 \mainmatter% ここから本文 %%% 本文 %%%%%%%%
 \chapter{はじめに}
 \section{研究背景}
-スポーツの勝敗予測は、選手のコンディション、戦術の変化、チームの相互作用など、多数の変数に影響されるため、予測が非常に困難である[1]。近年では、予測が困難なスポーツの試合結果を科学的に分析するアナリティクスの分野が注目され、予測の精度を高めるために統計的手法や機械学習が利用されるようになっている[2]。そこで本研究では、私自身の長年のサッカーの経験と、人工知能や機械学習の知識を使い、FIFAワールドカップ優勝国の予測を行う。
+スポーツの勝敗予測は、選手のコンディション、戦術の変化、チームの相互作用など、多数の変数に影響されるため、予測が非常に困難である[1]。近年では、予測が困難なスポーツの試合結果を科学的に分析するアナリティクスの分野が注目され、予測の精度を高めるために統計的手法や機械学習が利用されるようになっている[2]。本研究では、私自身の長年のサッカーの経験と、人工知能や機械学習の知識を使い、FIFAワールドカップ優勝国の予測を行う。
 \section{研究目的}
-本研究の目的は、過去のFIFAワールドカップのデータをもとに高精度な予測モデルを構築し、優勝国を予測することである。本研究ではランダムフォレスト[3]という機械学習手法を用いて予測を行う。ランダムフォレストは他の手法と比較して、複数の決定木[4]を利用することでデータの多様性と複雑な関連性を捉え、過学習[5]のリスクを減らす[6][7]。この能力により、スポーツの試合結果に影響する様々な変数を効果的に処理し、信頼性の高い予測結果を導き出すことが期待できる。また、他の手法に比べるとモデル構築とチューニングが容易[8]であるという特徴があり、卒業研究という限られた期間の中で成果を出すことができると考えられる。以上の理由から本研究ではランダムフォレストを採用する。\par
-近年ではスタッツデータと呼ばれるスポーツの試合に関するデータの活用の注目が高まり、リーグやチームの選手強化や戦術立案、スポーツベッティングで利用されている[9]ことから、本研究の予測結果はFIFA ワールドカップに関わる人々にとって有益な情報を提供することが期待できる。
+本研究の目的は、過去のFIFAワールドカップのデータをもとに高精度な予測モデルを構築し、優勝国を予測することである。サッカーの試合結果予測においては、様々な機械学習手法が採用されている。イングランドのプロサッカーリーグの試合結果予測を行った研究[3]では、決定木[4]によってデータの特徴間の関係をモデル化しやすくし、ナイーブベイズ[5]によって特徴間の独立性を仮定することで、サッカーのような多くの変数が影響するデータに対応し予測を行っている。また同じくイングランドのプロサッカーリーグに対して試合結果予測を行った別の研究[6]では、サポートベクタマシン[7]の過学習[8]を防ぎながら限られたデータからでも高い予測精度を達成するという特性を活かして予測を行っている。\par
+
+本研究ではこれらの手法の中からランダムフォレスト[9]を採用する。ランダムフォレストは、複数の決定木を組み合わせることでデータの多様性と複雑な関連性を捉え、過学習のリスクを減らすことができる[10][11]ため、ナイーブベイズの変数同士の複雑な関係やデータパターンを捉えるのには限界があるという欠点[12]を解決することでき、決定木の訓練データに過剰に適合する傾向がある[13]という問題を解決することができる。また、ランダムフォレストにはモデル構築とチューニングの容易であるという特徴があり[14]、サポートベクタマシンのモデル設計やチューニングが困難であるという欠点[15]を解決することができる。\par
+
+さらに、本研究ではランダムフォレストを用いた先行研究[16][17]では取り扱わないジニ係数[18]を特徴量としてを加える。ジニ係数とは国の貧富格差を示す指標であり、貧困がサッカーにおけるスキルの習得と知覚運動スキルの発達にプラスの影響を与えるといった研究[19]もある。これは、従来のサッカーの勝敗予測ではあまり注目されてこなかった選手の心理的側面を考慮することにより、試合結果に影響を与える可能性のある新たな要因をモデルに組み込む試みである。このアプローチにより、単に試合結果の統計的な情報だけでなく、選手の心理状態も試合結果予測の重要な要素として取り入れることができると考える。ランダムフォレストを用いたクラス分類によってFIFAワールドカップの優勝国予測を目的とした検証実験を行う。
 \section{論文の構成}
 第２章では、本研究の関連技術と用語について述べる。\par
 第３章では、検証実験について述べる。\par
@@ -70,19 +74,39 @@ Milad Keshtkar Langaroudi, Mohammad Reza Yamaghani, “Sports Result Prediction 
 \bibitem{}
 谷岡広樹, "スポーツアナリティクスにおけるデータとAI活用",P1, 2020
 \bibitem{}
-IBM"ランダムフォレストとは",https://www.ibm.com/jp-ja/topics/random-forest
+Saurabh Vaidya ,”Football Match Winner Prediction”, P1,P2, 2016
 \bibitem{}
-Cacoo,"決定木分析（ディシジョンツリー）とは？概要や活用方法、ランダムフォレストも解説", https://cacoo.com/ja/blog/what-is-decision-tree/
+Lucidspark, "決定木分析とは？メリットとやり方", \url{https://lucidspark.com/ja/blog/how-to-make-a-decision-tree}
 \bibitem{}
-TRYETING"機械学習における過学習とは何か？原因・回避方法をくわしく解説", https://www.tryeting.jp/column/6846/
+AVINTON ,”機械学習入門者向け Naive Bayes(単純ベイズ)アルゴリズムに触れてみる”,\url{https://avinton.com/academy/naive-bayes/}
 \bibitem{}
-Matthias Schonlau, Rosie Yuyan Zou, “The random forest algorithm for statistical learning”, P4, 2020
+Chinwe Peace Igiri,"Support Vector Machine-Based Prediction System for a Football Match Result", P1, 2015
 \bibitem{}
-Kai Liang,"Analysis and Evaluation of Sports Effect Based on Random Forest Algorithm under Big Data",P2, 2022
+AIsmiley, "サポートベクターマシン（SVM）とは？特徴やメリットと活用事例", \url{https://aismiley.co.jp/ai_news/svm/}
 \bibitem{}
-Philipp Probst,"Hyperparameters and Tuning Strategies for Random Forest",https://ar5iv.labs.arxiv.org/html/1804.03515
+TRYETING"機械学習における過学習とは何か?原因・回避方法をくわしく解説", \url{https://www.tryeting.jp/column/6846/}
 \bibitem{}
-経済産業省,スポーツ庁, "スポーツDXレポート",2022
+IBM"ランダムフォレストとは",\url{https://www.ibm.com/jp-ja/topics/random-forest}
+\bibitem{}
+Matthias Schonlau, Rosie Yuyan Zou, "The random forest algorithm for statistical learning", P4, 2020
+\bibitem{}
+Kai Liang,"Analysis and Evaluation of Sports Effect Based on Random Forest Algo-rithm under Big Data",P2, 2022
+\bibitem{}
+OpenGenus"9Advantages and 10disadvantages of Naive Bayes Algorithm", \url{https://iq.opengenus.org/advantages-and-disadvantages-of-naive-bayes-algorithm/}
+\bibitem{}
+InsideLearningMachines"8 Key Advantages And Disadvantages Of Decision Trees”, \url{https://insidelearningmachines.com/advantages_and_disadvantages_of_decision_trees/}
+\bibitem{}
+”Hyperparameters and Tuning Strategies for Random Forest”, \url{https://ar5iv.labs.arxiv.org/html/1804.03515}, 2019
+\bibitem{}
+Rosita Guido, ”A hyper-parameter tuning approach for cost-sensitive support vector machine classifiers”,P3,2022
+\bibitem{}
+Ayush Majumdar,\url{https://ieeexplore.ieee.org/author/37089837731},”Football Match Prediction using Exploratory Data Analysis and Multi-Output Regression”,P2, 2022
+\bibitem{}
+Pakawan Pugsee, ”Football Match Result Prediction Using the Random Forest Classifier”,P2, 2019
+\bibitem{}
+野村證券”ジニ係数｜証券用語解説集”, \url{https://www.nomura.co.jp/terms/japan/si/A02571.html}
+\bibitem{}
+Luiz Ueharaほか.” The Poor “Wealth” of Brazilian Football: How Poverty May Shape Skill and Expertise of Players”. \url{https://www.frontiersin.org/articles/10.3389/fspor.2021.635241/}
 
 
 \end{thebibliography}

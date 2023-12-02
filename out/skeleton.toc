@@ -6,21 +6,24 @@
 \contentsline {section}{\numberline {2.1}ランダムフォレスト}{3}{}%
 \contentsline {subsection}{\numberline {2.1.1}特徴選択}{4}{}%
 \contentsline {section}{\numberline {2.2}データの前処理}{5}{}%
-\contentsline {section}{\numberline {2.3}ハイパーパラメータチューニング}{5}{}%
-\contentsline {chapter}{\numberline {第3章}検証実験}{6}{}%
-\contentsline {section}{\numberline {3.1}データ詳細}{6}{}%
-\contentsline {section}{\numberline {3.2}評価指標}{6}{}%
-\contentsline {subsection}{\numberline {3.2.1}混合行列}{6}{}%
-\contentsline {subsection}{\numberline {3.2.2}正解率}{6}{}%
-\contentsline {subsection}{\numberline {3.2.3}適合率}{6}{}%
-\contentsline {subsection}{\numberline {3.2.4}再現率}{6}{}%
-\contentsline {subsection}{\numberline {3.2.5}F値}{6}{}%
-\contentsline {section}{\numberline {3.3}検証内容}{6}{}%
-\contentsline {section}{\numberline {3.4}検証結果}{6}{}%
-\contentsline {section}{\numberline {3.5}考察}{6}{}%
-\contentsline {chapter}{\numberline {第4章}まとめと今後の課題}{7}{}%
-\contentsline {section}{\numberline {4.1}まとめ}{7}{}%
-\contentsline {section}{\numberline {4.2}今後の課題}{7}{}%
-\contentsline {chapter}{謝辞}{8}{}%
-\contentsline {chapter}{参考文献}{9}{}%
-\contentsline {chapter}{\numberline {付録A}}{11}{}%
+\contentsline {subsection}{\numberline {2.2.1}アンダーサンプリング}{5}{}%
+\contentsline {subsection}{\numberline {2.2.2}SMOTE}{6}{}%
+\contentsline {subsection}{\numberline {2.2.3}アンダーサンプリングとSMOTEの統合}{6}{}%
+\contentsline {section}{\numberline {2.3}ハイパーパラメータチューニング}{7}{}%
+\contentsline {chapter}{\numberline {第3章}検証実験}{9}{}%
+\contentsline {section}{\numberline {3.1}データ詳細}{9}{}%
+\contentsline {section}{\numberline {3.2}評価指標}{9}{}%
+\contentsline {subsection}{\numberline {3.2.1}混合行列}{9}{}%
+\contentsline {subsection}{\numberline {3.2.2}正解率}{9}{}%
+\contentsline {subsection}{\numberline {3.2.3}適合率}{9}{}%
+\contentsline {subsection}{\numberline {3.2.4}再現率}{9}{}%
+\contentsline {subsection}{\numberline {3.2.5}F値}{9}{}%
+\contentsline {section}{\numberline {3.3}検証内容}{9}{}%
+\contentsline {section}{\numberline {3.4}検証結果}{9}{}%
+\contentsline {section}{\numberline {3.5}考察}{9}{}%
+\contentsline {chapter}{\numberline {第4章}まとめと今後の課題}{10}{}%
+\contentsline {section}{\numberline {4.1}まとめ}{10}{}%
+\contentsline {section}{\numberline {4.2}今後の課題}{10}{}%
+\contentsline {chapter}{謝辞}{11}{}%
+\contentsline {chapter}{参考文献}{12}{}%
+\contentsline {chapter}{\numberline {付録A}}{14}{}%

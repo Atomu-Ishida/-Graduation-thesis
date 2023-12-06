@@ -3,6 +3,7 @@
 \usepackage{graphicx}
 \usepackage[dvipdfmx]{color}
 \usepackage{here}
+\usepackage{amsmath}
 \title{ランダムフォレストによるサッカーW杯の優勝国予想}
 \author{石田亜斗武}
 \eauthor{Atomu Ishida}% Copyright 表示で使われる
@@ -88,11 +89,11 @@ G(k) = \sum_{i=1}^{n} p(i) \times (1-p(i))
 は、ノード \( k \) におけるターゲットラベル \( i \) の出現確率 \( p(i) \) を用いて、そのノードの不純度を算出する。完全に均一なサンプルの集合（すべてが同じラベル）の場合、ジニ不純度は0となり、サンプルが多様なラベルを持つほどジニ不純度は高くなる。
 
 特徴量の重要度 \( I(j) \) は、特徴量がデータの分割にどれだけ効果的に寄与しているかを示す。特徴量 \( j \) を用いてノードを分割することで得られるジニ不純度の減少量を、すべてのノードにわたって集計する。この計算は、式(2.4)
-\footnotesize
 \begin{equation}
-I(j) = \sum_{i=1}^{n \in F(j)} (N_{parent}(i) \times G_{parent}(i)) - (N_{left\*child}(i) \times G*{left\*child}(i) + N*{right\*child}(i) \times G*{right\*child}(i))
+\begin{split}
+I(j) = \sum_{i=1}^{n \in F(j)} (N_{parent}(i) \times G_{parent}(i)) - (N_{left\*child}(i) \times G*{left\*child}(i) \\ + N*{right\*child}(i) \times G*{right\*child}(i))
+\end{split}
 \end{equation}
-\normalsize
 によって表される。ここで、\( F(j) \) は特徴量 \( j \) が分割に使用されるノードの集合を示し、\( N*{parent}(i) \)、\( N_{left\*child}(i) \)、\( N*{right\*child}(i) \) はそれぞれ親ノードとその子ノードのサンプル数を表す。\( G*{parent}(i) \)、\( G_{left\*child}(i) \)、\( G*{right\_child}(i) \) はそれぞれのノードにおけるジニ不純度を示す。
 
 このようにして計算された特徴量の重要度は、モデルにおける各特徴量の寄与度を示し、モデルの解釈に役立つ。特に、予測結果に大きな影響を与える特徴量を特定することで、より効果的な特徴量エンジニアリングやモデルの改善に繋がる。また、データセット内の特徴量間の関係性を理解する上で重要な手がかりを提供する。

@@ -141,5 +141,6 @@ INPUT ./undersampling.png
 INPUT ./undersampling.png
 INPUT ./undersampling.png
 INPUT extractbb -B cropbox -O undersampling.png
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT out/skeleton.aux

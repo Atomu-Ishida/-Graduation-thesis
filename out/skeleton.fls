@@ -121,6 +121,14 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
 OUTPUT out/skeleton.toc
+INPUT out/skeleton.lof
+INPUT out/skeleton.lof
+INPUT out/skeleton.lof
+OUTPUT out/skeleton.lof
+INPUT out/skeleton.lot
+INPUT out/skeleton.lot
+INPUT out/skeleton.lot
+OUTPUT out/skeleton.lot
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm
